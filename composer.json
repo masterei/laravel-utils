@@ -34,7 +34,8 @@
                 "Masterei\\Utils\\UtilsServiceProvider"
             ],
             "aliases": {
-                "Cast": "Masterei\\Utils\\Facades\\Cast"
+                "Cast": "Masterei\\Utils\\Facades\\Cast",
+                "Regex": "Masterei\\Utils\\Facades\\Regex"
             }
         }
     },

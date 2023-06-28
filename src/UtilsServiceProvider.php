@@ -10,6 +10,7 @@ class UtilsServiceProvider extends ServiceProvider
     {
         BindFacade::bind($this, [
             'utility-cast' => Cast::class,
+            'utility-regex' => Regex::class,
 
         ]);
     }

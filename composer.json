@@ -1,10 +1,10 @@
 {
     "name": "masterei/laravel-utils",
-    "description": "Utility classes collection.",
+    "description": "Existing projects utility classes compilation.",
     "keywords": [
         "masterei",
         "laravel-utils",
-        "utils"
+        "compiled utility classes"
     ],
     "homepage": "https://github.com/masterei/laravel-utils",
     "license": "MIT",

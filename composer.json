@@ -1,0 +1,48 @@
+{
+    "name": "masterei/laravel-utils",
+    "description": "Utility classes collection.",
+    "keywords": [
+        "masterei",
+        "laravel-utils",
+        "utils"
+    ],
+    "homepage": "https://github.com/masterei/laravel-utils",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rey Arnejo Jr.",
+            "email": "mastereijunior@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Masterei\\Utils\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Masterei\\Utils\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Masterei\\Utils\\UtilsServiceProvider"
+            ],
+            "aliases": {
+                "Cast": "Masterei\\Utils\\Facades\\Cast"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "sort-packages": true
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.5"
+    }
+}

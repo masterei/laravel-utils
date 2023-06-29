@@ -10,7 +10,6 @@ class AttributeIndexes
 
         if(count($data[0]) > 1){
             foreach ($data[0] as $value){
-                // null data array
                 if(empty($value['data'])){
                     continue;
                 }

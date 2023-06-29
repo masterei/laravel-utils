@@ -8,7 +8,7 @@ class UtilsServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        BindFacade::bind($this, [
+        $this->bindFacades([
             'utility-cast' => Cast::class,
             'utility-regex' => Regex::class,
 
@@ -18,5 +18,14 @@ class UtilsServiceProvider extends ServiceProvider
     public function boot(): void
     {
 
+    }
+
+    protected function bindFacades(array $classes = []): void
+    {
+        foreach ($classes as $key => $class){
+            $this->app->bind($key, function () use ($class) {
+                return new $class();
+            });
+        }
     }
 }

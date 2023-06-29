@@ -18,6 +18,9 @@
     "require": {
         "php": "^8.0"
     },
+    "require-dev": {
+        "orchestra/testbench": "^8.5"
+    },
     "autoload": {
         "psr-4": {
             "Masterei\\Utils\\": "src/"
@@ -42,8 +45,5 @@
     "minimum-stability": "stable",
     "config": {
         "sort-packages": true
-    },
-    "require-dev": {
-        "orchestra/testbench": "^8.5"
     }
 }

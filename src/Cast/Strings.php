@@ -21,7 +21,7 @@ trait Strings
         return preg_replace("/[^A-Za-z0-9]/", '_', $filename);
     }
 
-    private static function ellipsis(string $string, int $max_length, string $position, int $dot_length): string
+    private static function ellipsis(string | null $string, int $max_length, string $position, int $dot_length): string | null
     {
         $str_len = strlen($string);
 
@@ -58,17 +58,17 @@ trait Strings
         return $string;
     }
 
-    public static function ellipsisLeft(string $string, int $max_length = 30, int $dot_length = 3): string
+    public static function ellipsisLeft(string | null $string, int $max_length = 30, int $dot_length = 3): string | null
     {
         return self::ellipsis($string, $max_length, Position::LEFT, $dot_length);
     }
 
-    public static function ellipsisCenter(string $string, int $max_length = 30, int $dot_length = 3): string
+    public static function ellipsisCenter(string | null $string, int $max_length = 30, int $dot_length = 3): string | null
     {
         return self::ellipsis($string, $max_length, Position::CENTER, $dot_length);
     }
 
-    public static function ellipsisRight(string $string, int $max_length = 30, int $dot_length = 3): string
+    public static function ellipsisRight(string | null $string, int $max_length = 30, int $dot_length = 3): string | null
     {
         return self::ellipsis($string, $max_length, Position::RIGHT, $dot_length);
     }

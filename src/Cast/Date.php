@@ -33,9 +33,9 @@ trait Date
         return self::parseDate($date, 'F d, Y h:i:s A', $base_format);
     }
 
-    public static function parseDateFdyToYmd(string | null $date , string $base_format = 'F d, Y'): string | null
+    public static function parseDateFdyToYmd(string | null $date): string | null
     {
-        return self::parseDate($date, 'Y-m-d', $base_format);
+        return self::parseDate($date, 'Y-m-d', 'F d, Y');
     }
 
     private static function parseExcelDate(int | null $date, string $format): string | null

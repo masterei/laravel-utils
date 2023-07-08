@@ -38,8 +38,13 @@ trait Date
         return self::parseDate($date, 'Y-m-d', $base_format);
     }
 
-    private static function parseExcelDate(int $date, string $format): string
+    private static function parseExcelDate(int | null $date, string $format): string | null
     {
+        // null date
+        if(empty($date)){
+            return null;
+        }
+
         $unix_date = ($date - 25569) * 86400;
         $date = 25569 + ($unix_date / 86400);
         $unix_date = ($date - 25569) * 86400;
@@ -47,12 +52,12 @@ trait Date
         return gmdate($format, $unix_date);
     }
 
-    public static function excelDateToYmd(int $date, string $format = 'Y-m-d'): string
+    public static function excelDateToYmd(int | null $date, string $format = 'Y-m-d'): string | null
     {
         return self::parseExcelDate($date, $format);
     }
 
-    public static function excelDateToFdy(int $date, string $format = 'F d, Y'): string
+    public static function excelDateToFdy(int| null $date, string $format = 'F d, Y'): string | null
     {
         return self::parseExcelDate($date, $format);
     }

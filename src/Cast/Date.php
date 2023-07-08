@@ -18,24 +18,24 @@ trait Date
             : Carbon::createFromFormat($base_format, $date)->format($format);
     }
 
-    public static function parseDateToYmd(string | null $date, string $format = 'Y-m-d', string | null $base_format = null): string | null
+    public static function parseDateToYmd(string | null $date, string | null $base_format = null): string | null
     {
-        return self::parseDate($date, $format, $base_format);
+        return self::parseDate($date, 'Y-m-d', $base_format);
     }
 
-    public static function parseDateToFdy(string | null $date, string $format = 'F d, Y', string $base_format = null): string | null
+    public static function parseDateToFdy(string | null $date, string $base_format = null): string | null
     {
-        return self::parseDate($date, $format, $base_format);
+        return self::parseDate($date, 'F d, Y', $base_format);
     }
 
-    public static function parseDateToFdyHisA(string | null $date, string $format = 'F d, Y h:i:s A', string $base_format = null): string | null
+    public static function parseDateToFdyHisA(string | null $date, string $base_format = null): string | null
     {
-        return self::parseDate($date, $format, $base_format);
+        return self::parseDate($date, 'F d, Y h:i:s A', $base_format);
     }
 
-    public static function parseDateFdyToYmd(string | null $date, string $format = 'Y-m-d', string $base_format = 'F d, Y'): string | null
+    public static function parseDateFdyToYmd(string | null $date , string $base_format = 'F d, Y'): string | null
     {
-        return self::parseDate($date, $format, $base_format);
+        return self::parseDate($date, 'Y-m-d', $base_format);
     }
 
     private static function parseExcelDate(int $date, string $format): string

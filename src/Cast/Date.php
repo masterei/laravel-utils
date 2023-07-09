@@ -6,7 +6,7 @@ use Carbon\Carbon;
 
 trait Date
 {
-    private static function parseDate(string | null $date, string $format, string | null $base_format = null): string | null
+    public static function parseDate(string | null $date, string $format, string | null $base_format = null): string | null
     {
         // null date
         if(empty($date)){
@@ -38,7 +38,7 @@ trait Date
         return self::parseDate($date, 'Y-m-d', 'F d, Y');
     }
 
-    private static function parseExcelDate(int | null $date, string $format): string | null
+    public static function parseExcelDate(int | null $date, string $format): string | null
     {
         // null date
         if(empty($date)){

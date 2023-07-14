@@ -18,6 +18,9 @@
     "require": {
         "php": "^8.0"
     },
+    "require-dev": {
+        "orchestra/testbench": "^8.5"
+    },
     "autoload": {
         "psr-4": {
             "Masterei\\Utils\\": "src/"
@@ -34,15 +37,13 @@
                 "Masterei\\Utils\\UtilsServiceProvider"
             ],
             "aliases": {
-                "Cast": "Masterei\\Utils\\Facades\\Cast"
+                "Cast": "Masterei\\Utils\\Facades\\Cast",
+                "Regex": "Masterei\\Utils\\Facades\\Regex"
             }
         }
     },
     "minimum-stability": "stable",
     "config": {
         "sort-packages": true
-    },
-    "require-dev": {
-        "orchestra/testbench": "^8.5"
     }
 }
